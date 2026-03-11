@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTSRY — DJ · Producer · Performer · Austin TX</title>
+  <meta name="description" content="NTSRY — Austin-based DJ, Producer, and Performer. Book for clubs, festivals, private events. Listen on SoundCloud and Spotify." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">NTSRY</a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#bio" class="nav__link" data-section="bio">Bio</a></li>
+        <li><a href="#music" class="nav__link" data-section="music">Music</a></li>
+        <li><a href="#videos" class="nav__link" data-section="videos">Videos</a></li>
+        <li><a href="#photos" class="nav__link" data-section="photos">Photos</a></li>
+        <li><a href="#booking" class="nav__link nav__link--cta" data-section="booking">Book</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div class="nav__mobile" id="mobileMenu">
+      <ul class="nav__mobile-links">
+        <li><a href="#bio" class="nav__mobile-link">Bio</a></li>
+        <li><a href="#music" class="nav__mobile-link">Music</a></li>
+        <li><a href="#videos" class="nav__mobile-link">Videos</a></li>
+        <li><a href="#photos" class="nav__mobile-link">Photos</a></li>
+        <li><a href="#booking" class="nav__mobile-link nav__mobile-link--cta">Book</a></li>
+      </ul>
+      <div class="nav__mobile-socials">
+        <a href="#" aria-label="Instagram" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
+        </a>
+        <a href="#" aria-label="X / Twitter" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" aria-label="SoundCloud" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.015 0-.023.01-.024.025l-.315 2.005.315 1.985c.001.015.01.026.024.026.015 0 .024-.01.024-.026l.355-1.985-.355-2.005c0-.016-.01-.025-.024-.025zm.79-.099c-.016 0-.027.011-.028.027l-.268 2.077.268 2.053c.001.016.012.027.028.027.016 0 .027-.011.028-.027l.304-2.053-.304-2.077c-.001-.016-.012-.027-.028-.027zm.79-.09c-.018 0-.031.013-.032.031l-.223 2.136.223 2.115c.001.018.014.031.032.031.018 0 .031-.013.032-.031l.252-2.115-.252-2.136c-.001-.018-.014-.031-.032-.031zm.8-.082c-.02 0-.034.014-.035.034l-.177 2.183.177 2.175c.001.02.015.034.035.034.02 0 .034-.014.035-.034l.2-2.175-.2-2.183c-.001-.02-.015-.034-.035-.034zm.8-.07c-.021 0-.037.015-.038.036l-.133 2.217.133 2.21c.001.022.017.037.038.037.022 0 .037-.016.038-.037l.151-2.21-.151-2.217c-.001-.021-.016-.036-.038-.036zm.8-.054c-.023 0-.04.017-.041.04l-.091 2.244.091 2.241c.001.022.018.04.041.04.023 0 .04-.017.041-.04l.103-2.241-.103-2.244c-.001-.023-.018-.04-.041-.04zm3.85-1.007c-.105-.032-.213-.052-.327-.052-.236 0-.449.07-.63.185a2.78 2.78 0 00-2.752-2.403c-.276 0-.54.045-.789.127-.09.031-.114.063-.115.093v4.843c.001.031.025.057.055.058h5.035c.03-.001.054-.026.055-.058V11.17c0-.484-.302-.897-.73-1.066-.136-.054-.279-.082-.427-.082a1.38 1.38 0 00-.375.053z"/></svg>
+        </a>
+        <a href="#" aria-label="Spotify" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="images/IMG_4462.JPG" alt="NTSRY" class="hero__img" />
+      <div class="hero__overlay"></div>
+      <div class="hero__vignette"></div>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__name">NTSRY</h1>
+      <p class="hero__subtitle">DJ &nbsp;·&nbsp; PRODUCER &nbsp;·&nbsp; PERFORMER</p>
+      <div class="hero__ctas">
+        <a href="#booking" class="btn btn--filled">Book Now</a>
+        <a href="#music" class="btn btn--outline">Listen</a>
+      </div>
+    </div>
+    <a href="#bio" class="hero__scroll" aria-label="Scroll down">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- ===================== BIO ===================== -->
+  <section class="bio section" id="bio">
+    <div class="container bio__inner">
+      <div class="bio__photo-wrap">
+        <img src="images/IMG_4462.JPG" alt="NTSRY artist photo" class="bio__photo" />
+      </div>
+      <div class="bio__text">
+        <h2 class="section-heading">About</h2>
+        <blockquote class="bio__quote">
+          Austin's own NTSRY brings an infectious energy to every set — blending house, hip-hop, and electronic beats into an unforgettable experience.
+        </blockquote>
+        <p class="bio__body">
+          From intimate club nights to massive festival stages, NTSRY has built a reputation for reading a crowd and keeping floors packed. Based in Austin, TX, the DJ/producer/performer melds genres effortlessly — pulling from deep house, hip-hop, trap, and electronic to craft sets that feel both personal and euphoric. With years of experience behind the decks and a growing catalog of original productions, NTSRY is one of Austin's most sought-after performers.
+        </p>
+        <div class="bio__stats">
+          <div class="bio__stat">
+            <span class="bio__stat-num">100+</span>
+            <span class="bio__stat-label">Shows</span>
+          </div>
+          <div class="bio__stat">
+            <span class="bio__stat-num">5+</span>
+            <span class="bio__stat-label">Years Active</span>
+          </div>
+          <div class="bio__stat">
+            <span class="bio__stat-num">ATX</span>
+            <span class="bio__stat-label">Based</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MUSIC ===================== -->
+  <section class="music section" id="music">
+    <div class="container">
+      <h2 class="section-heading section-heading--center">Music</h2>
+      <div class="music__embed">
+        <iframe
+          width="100%"
+          height="166"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/ntsry&color=%23A6778D&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+          title="NTSRY on SoundCloud"
+        ></iframe>
+        <iframe
+          width="100%"
+          height="300"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/ntsry&color=%23A6778D&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+          title="NTSRY mixes on SoundCloud"
+        ></iframe>
+      </div>
+      <div class="music__platforms">
+        <a href="#" class="platform-btn" aria-label="SoundCloud">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.175 12.225c-.015 0-.023.01-.024.025l-.315 2.005.315 1.985c.001.015.01.026.024.026.015 0 .024-.01.024-.026l.355-1.985-.355-2.005c0-.016-.01-.025-.024-.025zm.79-.099c-.016 0-.027.011-.028.027l-.268 2.077.268 2.053c.001.016.012.027.028.027.016 0 .027-.011.028-.027l.304-2.053-.304-2.077c-.001-.016-.012-.027-.028-.027zm.79-.09c-.018 0-.031.013-.032.031l-.223 2.136.223 2.115c.001.018.014.031.032.031.018 0 .031-.013.032-.031l.252-2.115-.252-2.136c-.001-.018-.014-.031-.032-.031zm.8-.082c-.02 0-.034.014-.035.034l-.177 2.183.177 2.175c.001.02.015.034.035.034.02 0 .034-.014.035-.034l.2-2.175-.2-2.183c-.001-.02-.015-.034-.035-.034zm.8-.07c-.021 0-.037.015-.038.036l-.133 2.217.133 2.21c.001.022.017.037.038.037.022 0 .037-.016.038-.037l.151-2.21-.151-2.217c-.001-.021-.016-.036-.038-.036zm.8-.054c-.023 0-.04.017-.041.04l-.091 2.244.091 2.241c.001.022.018.04.041.04.023 0 .04-.017.041-.04l.103-2.241-.103-2.244c-.001-.023-.018-.04-.041-.04zm3.85-1.007c-.105-.032-.213-.052-.327-.052-.236 0-.449.07-.63.185a2.78 2.78 0 00-2.752-2.403c-.276 0-.54.045-.789.127-.09.031-.114.063-.115.093v4.843c.001.031.025.057.055.058h5.035c.03-.001.054-.026.055-.058V11.17c0-.484-.302-.897-.73-1.066-.136-.054-.279-.082-.427-.082a1.38 1.38 0 00-.375.053z"/></svg>
+          <span>SoundCloud</span>
+        </a>
+        <a href="#" class="platform-btn" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          <span>Spotify</span>
+        </a>
+        <a href="#" class="platform-btn" aria-label="Apple Music">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208a5.495 5.495 0 00-.35 1.449c-.06.485-.087.973-.09 1.46-.005.153-.008.306-.008.46v9.23c0 .152.003.305.008.458.003.487.03.975.09 1.46a5.483 5.483 0 00.35 1.449c.566 1.329 1.53 2.25 2.865 2.78.703.278 1.447.358 2.19.41.152.01.303.016.456.025h12.01c.152-.01.303-.015.454-.024.743-.052 1.487-.132 2.19-.41 1.335-.53 2.3-1.452 2.865-2.781a5.49 5.49 0 00.35-1.449c.06-.485.087-.973.09-1.46.005-.153.008-.306.008-.459V7.043c0-.154-.003-.307-.008-.46zm-6.498 7.19l-5.002 2.878c-.497.286-1.114-.072-1.114-.64V8.448c0-.568.617-.926 1.114-.64l5.002 2.878c.497.287.497 1.001 0 1.288z"/></svg>
+          <span>Apple Music</span>
+        </a>
+        <a href="#" class="platform-btn" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>YouTube</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VIDEOS ===================== -->
+  <section class="videos section" id="videos">
+    <div class="container">
+      <h2 class="section-heading section-heading--center">Videos</h2>
+      <div class="videos__grid">
+        <div class="video-card">
+          <div class="video-card__embed">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="NTSRY Live Set"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="video-card__caption">NTSRY — Live Set @ Austin</p>
+        </div>
+        <div class="video-card">
+          <div class="video-card__embed">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="NTSRY Mix"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="video-card__caption">NTSRY — Studio Mix Vol. 1</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PHOTOS / GALLERY ===================== -->
+  <section class="gallery section" id="photos">
+    <div class="container">
+      <h2 class="section-heading section-heading--center">Press Photos</h2>
+      <div class="gallery__grid">
+        <figure class="gallery__item" data-index="0" tabindex="0" role="button" aria-label="Open photo 1">
+          <img src="images/IMG_4462.JPG" alt="NTSRY B&W promo portrait" loading="lazy" />
+          <figcaption class="gallery__overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item" data-index="1" tabindex="0" role="button" aria-label="Open photo 2">
+          <img src="images/IMG_4086.PNG" alt="NTSRY red stage shot" loading="lazy" />
+          <figcaption class="gallery__overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item" data-index="2" tabindex="0" role="button" aria-label="Open photo 3">
+          <img src="images/IMG_4084.PNG" alt="NTSRY blue stage back" loading="lazy" />
+          <figcaption class="gallery__overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
+          </figcaption>
+        </figure>
+        <figure class="gallery__item" data-index="3" tabindex="0" role="button" aria-label="Open photo 4">
+          <img src="images/IMG_4085.PNG" alt="NTSRY blue hands up crowd" loading="lazy" />
+          <figcaption class="gallery__overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox__content">
+      <img src="" alt="" class="lightbox__img" id="lightboxImg" />
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ===================== BOOKING ===================== -->
+  <section class="booking section" id="booking">
+    <div class="container booking__inner">
+      <div class="booking__header">
+        <h2 class="section-heading">Book NTSRY</h2>
+        <p class="booking__sub">For bookings, collabs, and inquiries</p>
+      </div>
+      <form class="booking__form" action="mailto:Austin@NTSRY.com" method="POST" enctype="text/plain">
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="Name" class="form-input" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="Email" class="form-input" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label for="event-type" class="form-label">Event Type</label>
+            <select id="event-type" name="Event Type" class="form-input form-select" required>
+              <option value="" disabled selected>Select event type</option>
+              <option value="Club">Club</option>
+              <option value="Festival">Festival</option>
+              <option value="Private Event">Private Event</option>
+              <option value="Corporate">Corporate</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="event-date" class="form-label">Event Date</label>
+            <input type="date" id="event-date" name="Event Date" class="form-input" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="Message" class="form-input form-textarea" placeholder="Tell us about your event, venue, capacity, and any special requests..." rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn--filled btn--full">Send Booking Inquiry</button>
+      </form>
+      <p class="booking__direct">
+        Or email directly: <a href="mailto:Austin@NTSRY.com" class="booking__email">Austin@NTSRY.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="footer__logo">NTSRY</a>
+      <p class="footer__tagline">DJ · Producer · Performer · Austin TX</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
+        </a>
+        <a href="#" aria-label="X / Twitter" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" aria-label="SoundCloud" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.015 0-.023.01-.024.025l-.315 2.005.315 1.985c.001.015.01.026.024.026.015 0 .024-.01.024-.026l.355-1.985-.355-2.005c0-.016-.01-.025-.024-.025zm.79-.099c-.016 0-.027.011-.028.027l-.268 2.077.268 2.053c.001.016.012.027.028.027.016 0 .027-.011.028-.027l.304-2.053-.304-2.077c-.001-.016-.012-.027-.028-.027zm.79-.09c-.018 0-.031.013-.032.031l-.223 2.136.223 2.115c.001.018.014.031.032.031.018 0 .031-.013.032-.031l.252-2.115-.252-2.136c-.001-.018-.014-.031-.032-.031zm.8-.082c-.02 0-.034.014-.035.034l-.177 2.183.177 2.175c.001.02.015.034.035.034.02 0 .034-.014.035-.034l.2-2.175-.2-2.183c-.001-.02-.015-.034-.035-.034zm.8-.07c-.021 0-.037.015-.038.036l-.133 2.217.133 2.21c.001.022.017.037.038.037.022 0 .037-.016.038-.037l.151-2.21-.151-2.217c-.001-.021-.016-.036-.038-.036zm.8-.054c-.023 0-.04.017-.041.04l-.091 2.244.091 2.241c.001.022.018.04.041.04.023 0 .04-.017.041-.04l.103-2.241-.103-2.244c-.001-.023-.018-.04-.041-.04zm3.85-1.007c-.105-.032-.213-.052-.327-.052-.236 0-.449.07-.63.185a2.78 2.78 0 00-2.752-2.403c-.276 0-.54.045-.789.127-.09.031-.114.063-.115.093v4.843c.001.031.025.057.055.058h5.035c.03-.001.054-.026.055-.058V11.17c0-.484-.302-.897-.73-1.066-.136-.054-.279-.082-.427-.082a1.38 1.38 0 00-.375.053z"/></svg>
+        </a>
+        <a href="#" aria-label="Spotify" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </a>
+        <a href="#" aria-label="Apple Music" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208a5.495 5.495 0 00-.35 1.449c-.06.485-.087.973-.09 1.46-.005.153-.008.306-.008.46v9.23c0 .152.003.305.008.458.003.487.03.975.09 1.46a5.483 5.483 0 00.35 1.449c.566 1.329 1.53 2.25 2.865 2.78.703.278 1.447.358 2.19.41.152.01.303.016.456.025h12.01c.152-.01.303-.015.454-.024.743-.052 1.487-.132 2.19-.41 1.335-.53 2.3-1.452 2.865-2.781a5.49 5.49 0 00.35-1.449c.06-.485.087-.973.09-1.46.005-.153.008-.306.008-.459V7.043c0-.154-.003-.307-.008-.46zm-6.498 7.19l-5.002 2.878c-.497.286-1.114-.072-1.114-.64V8.448c0-.568.617-.926 1.114-.64l5.002 2.878c.497.287.497 1.001 0 1.288z"/></svg>
+        </a>
+        <a href="#" aria-label="Clothing / Merch" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H5v10a2 2 0 002 2h10a2 2 0 002-2V10h1.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.13z"/></svg>
+        </a>
+      </div>
+      <p class="footer__copy">&copy; <span id="year"></span> NTSRY. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
