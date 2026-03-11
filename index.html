@@ -5,12 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NTSRY — DJ · Producer · Performer</title>
   <meta name="description" content="NTSRY — DJ, Producer, and Performer. Book for clubs, festivals, private events. Listen on SoundCloud and Spotify." />
+
+  <!-- Open Graph / Social Share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ntsry.com/" />
+  <meta property="og:title" content="NTSRY — DJ · Producer · Performer" />
+  <meta property="og:description" content="NTSRY — DJ, Producer, and Performer. Book for clubs, festivals, and private events." />
+  <meta property="og:image" content="https://one2threeone.github.io/NTSRY/images/IMG_4462.JPG" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SRYNOTSRYFAM" />
+  <meta name="twitter:title" content="NTSRY — DJ · Producer · Performer" />
+  <meta name="twitter:description" content="NTSRY — DJ, Producer, and Performer. Book for clubs, festivals, and private events." />
+  <meta name="twitter:image" content="https://one2threeone.github.io/NTSRY/images/IMG_4462.JPG" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230D0A00'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='22' fill='%23A6778D'>N</text></svg>" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- Custom cursor (desktop only, hidden on touch) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav class="nav" id="nav">
@@ -23,6 +43,7 @@
         <li><a href="#music" class="nav__link" data-section="music">Music</a></li>
         <li><a href="#videos" class="nav__link" data-section="videos">Videos</a></li>
         <li><a href="#photos" class="nav__link" data-section="photos">Photos</a></li>
+        <li><a href="#shows" class="nav__link" data-section="shows">Shows</a></li>
         <li><a href="#booking" class="nav__link nav__link--cta" data-section="booking">Book</a></li>
       </ul>
 
@@ -41,6 +62,7 @@
         <li><a href="#music" class="nav__mobile-link">Music</a></li>
         <li><a href="#videos" class="nav__mobile-link">Videos</a></li>
         <li><a href="#photos" class="nav__mobile-link">Photos</a></li>
+        <li><a href="#shows" class="nav__mobile-link">Shows</a></li>
         <li><a href="#booking" class="nav__mobile-link nav__mobile-link--cta">Book</a></li>
       </ul>
       <div class="nav__mobile-socials">
@@ -72,6 +94,7 @@
       <img src="images/IMG_4462.JPG" alt="NTSRY" class="hero__img" />
       <div class="hero__overlay"></div>
       <div class="hero__vignette"></div>
+      <div class="hero__scanlines"></div>
     </div>
     <div class="hero__content">
       <h1 class="hero__name">NTSRY</h1>
@@ -86,13 +109,25 @@
     </a>
   </section>
 
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>DJ &nbsp;·&nbsp; PRODUCER &nbsp;·&nbsp; PERFORMER &nbsp;·&nbsp; BOOK NOW &nbsp;·&nbsp; NTSRY &nbsp;·&nbsp; </span>
+      <span>DJ &nbsp;·&nbsp; PRODUCER &nbsp;·&nbsp; PERFORMER &nbsp;·&nbsp; BOOK NOW &nbsp;·&nbsp; NTSRY &nbsp;·&nbsp; </span>
+      <span>DJ &nbsp;·&nbsp; PRODUCER &nbsp;·&nbsp; PERFORMER &nbsp;·&nbsp; BOOK NOW &nbsp;·&nbsp; NTSRY &nbsp;·&nbsp; </span>
+      <span>DJ &nbsp;·&nbsp; PRODUCER &nbsp;·&nbsp; PERFORMER &nbsp;·&nbsp; BOOK NOW &nbsp;·&nbsp; NTSRY &nbsp;·&nbsp; </span>
+      <span>DJ &nbsp;·&nbsp; PRODUCER &nbsp;·&nbsp; PERFORMER &nbsp;·&nbsp; BOOK NOW &nbsp;·&nbsp; NTSRY &nbsp;·&nbsp; </span>
+      <span>DJ &nbsp;·&nbsp; PRODUCER &nbsp;·&nbsp; PERFORMER &nbsp;·&nbsp; BOOK NOW &nbsp;·&nbsp; NTSRY &nbsp;·&nbsp; </span>
+    </div>
+  </div>
+
   <!-- ===================== BIO ===================== -->
   <section class="bio section" id="bio">
     <div class="container bio__inner">
-      <div class="bio__photo-wrap">
+      <div class="bio__photo-wrap reveal">
         <img src="images/IMG_4462.JPG" alt="NTSRY artist photo" class="bio__photo" />
       </div>
-      <div class="bio__text">
+      <div class="bio__text reveal">
         <h2 class="section-heading">About</h2>
         <blockquote class="bio__quote">
           NTSRY brings an infectious energy to every set — blending house, hip-hop, and electronic beats into an unforgettable experience.
@@ -121,8 +156,8 @@
   <!-- ===================== MUSIC ===================== -->
   <section class="music section" id="music">
     <div class="container">
-      <h2 class="section-heading section-heading--center">Music</h2>
-      <div class="music__embed">
+      <h2 class="section-heading section-heading--center reveal">Music</h2>
+      <div class="music__embed reveal">
         <iframe
           width="100%"
           height="166"
@@ -142,7 +177,7 @@
           title="NTSRY mixes on SoundCloud"
         ></iframe>
       </div>
-      <div class="music__platforms">
+      <div class="music__platforms reveal">
         <a href="https://soundcloud.com/srynotsryfam" class="platform-btn" aria-label="SoundCloud" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.175 12.225c-.015 0-.023.01-.024.025l-.315 2.005.315 1.985c.001.015.01.026.024.026.015 0 .024-.01.024-.026l.355-1.985-.355-2.005c0-.016-.01-.025-.024-.025zm.79-.099c-.016 0-.027.011-.028.027l-.268 2.077.268 2.053c.001.016.012.027.028.027.016 0 .027-.011.028-.027l.304-2.053-.304-2.077c-.001-.016-.012-.027-.028-.027zm.79-.09c-.018 0-.031.013-.032.031l-.223 2.136.223 2.115c.001.018.014.031.032.031.018 0 .031-.013.032-.031l.252-2.115-.252-2.136c-.001-.018-.014-.031-.032-.031zm.8-.082c-.02 0-.034.014-.035.034l-.177 2.183.177 2.175c.001.02.015.034.035.034.02 0 .034-.014.035-.034l.2-2.175-.2-2.183c-.001-.02-.015-.034-.035-.034zm.8-.07c-.021 0-.037.015-.038.036l-.133 2.217.133 2.21c.001.022.017.037.038.037.022 0 .037-.016.038-.037l.151-2.21-.151-2.217c-.001-.021-.016-.036-.038-.036zm.8-.054c-.023 0-.04.017-.041.04l-.091 2.244.091 2.241c.001.022.018.04.041.04.023 0 .04-.017.041-.04l.103-2.241-.103-2.244c-.001-.023-.018-.04-.041-.04zm3.85-1.007c-.105-.032-.213-.052-.327-.052-.236 0-.449.07-.63.185a2.78 2.78 0 00-2.752-2.403c-.276 0-.54.045-.789.127-.09.031-.114.063-.115.093v4.843c.001.031.025.057.055.058h5.035c.03-.001.054-.026.055-.058V11.17c0-.484-.302-.897-.73-1.066-.136-.054-.279-.082-.427-.082a1.38 1.38 0 00-.375.053z"/></svg>
           <span>SoundCloud</span>
@@ -166,9 +201,10 @@
   <!-- ===================== VIDEOS ===================== -->
   <section class="videos section" id="videos">
     <div class="container">
-      <h2 class="section-heading section-heading--center">Videos</h2>
+      <h2 class="section-heading section-heading--center reveal">Videos</h2>
       <div class="videos__grid">
-        <div class="video-card">
+        <!-- Replace XXXXXXXXXXX with the YouTube video ID (e.g. dQw4w9WgXcQ) -->
+        <div class="video-card reveal" data-reveal-delay="0">
           <div class="video-card__embed">
             <iframe
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -180,7 +216,8 @@
           </div>
           <p class="video-card__caption">NTSRY — Live Set</p>
         </div>
-        <div class="video-card">
+        <!-- Replace XXXXXXXXXXX with the YouTube video ID -->
+        <div class="video-card reveal" data-reveal-delay="150">
           <div class="video-card__embed">
             <iframe
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -199,27 +236,27 @@
   <!-- ===================== PHOTOS / GALLERY ===================== -->
   <section class="gallery section" id="photos">
     <div class="container">
-      <h2 class="section-heading section-heading--center">Press Photos</h2>
+      <h2 class="section-heading section-heading--center reveal">Press Photos</h2>
       <div class="gallery__grid">
-        <figure class="gallery__item" data-index="0" tabindex="0" role="button" aria-label="Open photo 1">
+        <figure class="gallery__item reveal" data-reveal-delay="0" data-index="0" tabindex="0" role="button" aria-label="Open photo 1">
           <img src="images/IMG_4462.JPG" alt="NTSRY B&W promo portrait" loading="lazy" />
           <figcaption class="gallery__overlay">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
           </figcaption>
         </figure>
-        <figure class="gallery__item" data-index="1" tabindex="0" role="button" aria-label="Open photo 2">
+        <figure class="gallery__item reveal" data-reveal-delay="100" data-index="1" tabindex="0" role="button" aria-label="Open photo 2">
           <img src="images/IMG_4086.PNG" alt="NTSRY red stage shot" loading="lazy" />
           <figcaption class="gallery__overlay">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
           </figcaption>
         </figure>
-        <figure class="gallery__item" data-index="2" tabindex="0" role="button" aria-label="Open photo 3">
+        <figure class="gallery__item reveal" data-reveal-delay="200" data-index="2" tabindex="0" role="button" aria-label="Open photo 3">
           <img src="images/IMG_4084.PNG" alt="NTSRY blue stage back" loading="lazy" />
           <figcaption class="gallery__overlay">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
           </figcaption>
         </figure>
-        <figure class="gallery__item" data-index="3" tabindex="0" role="button" aria-label="Open photo 4">
+        <figure class="gallery__item reveal" data-reveal-delay="300" data-index="3" tabindex="0" role="button" aria-label="Open photo 4">
           <img src="images/IMG_4085.PNG" alt="NTSRY blue hands up crowd" loading="lazy" />
           <figcaption class="gallery__overlay">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="gallery__zoom"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 2l2 2"/></svg>
@@ -246,14 +283,71 @@
     </div>
   </div>
 
+  <!-- ===================== UPCOMING SHOWS ===================== -->
+  <section class="shows section" id="shows">
+    <div class="container">
+      <h2 class="section-heading section-heading--center reveal">Upcoming Shows</h2>
+
+      <div class="shows__list">
+        <div class="show-item reveal">
+          <div class="show-item__date">
+            <span class="show-item__month">MAY</span>
+            <span class="show-item__day">1</span>
+          </div>
+          <div class="show-item__info">
+            <p class="show-item__name">BEASTBOI</p>
+            <p class="show-item__venue">Varsity Tavern &nbsp;·&nbsp; Tempe, AZ</p>
+            <p class="show-item__time">9PM–2AM</p>
+          </div>
+          <div class="show-item__meta">
+            <span class="show-item__badge">NTSRY 9–10PM</span>
+            <a href="https://www.tixr.com/groups/relentlessbeats/events/beastboi--169471" class="btn btn--outline show-item__tickets" target="_blank" rel="noopener noreferrer">Get Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo / Giveaway Banner -->
+      <div class="shows__promo reveal">
+        <div class="shows__promo-inner">
+          <div class="shows__promo-text">
+            <p class="shows__promo-headline">Win 2 Free VIP CRANKDAT Tickets</p>
+            <p class="shows__promo-body">
+              Buy tickets to BEASTBOI using promo code <strong class="shows__promo-code">NTSRY</strong> and automatically enter to win 2 VIP tickets to CRANKDAT — May 9 at Rawhide.
+            </p>
+          </div>
+          <a href="https://www.tixr.com/groups/relentlessbeats/events/beastboi--169471" class="btn btn--filled" target="_blank" rel="noopener noreferrer">Use Code NTSRY</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PRESS QUOTES ===================== -->
+  <!-- TODO: Replace placeholder quotes below with real press quotes -->
+  <section class="quotes section" id="quotes">
+    <div class="container">
+      <h2 class="section-heading section-heading--center reveal">What They're Saying</h2>
+      <div class="quotes__grid">
+        <blockquote class="quote-card reveal" data-reveal-delay="0">
+          <p class="quote-card__text">"One of the most dynamic DJs in the scene right now — NTSRY's sets are an experience you won't forget."</p>
+          <cite class="quote-card__source">— Venue Magazine</cite>
+        </blockquote>
+        <blockquote class="quote-card reveal" data-reveal-delay="150">
+          <p class="quote-card__text">"NTSRY kept the crowd going all night. Incredible energy, flawless transitions — the crowd never stopped moving."</p>
+          <cite class="quote-card__source">— Festival Promoter</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== BOOKING ===================== -->
   <section class="booking section" id="booking">
     <div class="container booking__inner">
-      <div class="booking__header">
+      <div class="booking__header reveal">
         <h2 class="section-heading">Book NTSRY</h2>
         <p class="booking__sub">For bookings, collabs, and inquiries</p>
       </div>
-      <form class="booking__form" action="mailto:Austin@NTSRY.com" method="POST" enctype="text/plain">
+      <form class="booking__form reveal" action="mailto:Austin@NTSRY.com" method="POST" enctype="text/plain">
         <div class="form-row form-row--2">
           <div class="form-group">
             <label for="name" class="form-label">Name</label>

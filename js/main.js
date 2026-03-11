@@ -11,20 +11,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const nav = document.getElementById('nav');
 
 function handleNavScroll() {
-  if (window.scrollY > 20) {
-    nav.classList.add('nav--scrolled');
-  } else {
-    nav.classList.remove('nav--scrolled');
-  }
+  nav.classList.toggle('nav--scrolled', window.scrollY > 20);
 }
-
 window.addEventListener('scroll', handleNavScroll, { passive: true });
-handleNavScroll(); // run on init
+handleNavScroll();
 
 // ── Hamburger / mobile menu ──
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileLinks = mobileMenu.querySelectorAll('.nav__mobile-link');
+const hamburger    = document.getElementById('hamburger');
+const mobileMenu   = document.getElementById('mobileMenu');
+const mobileLinks  = mobileMenu.querySelectorAll('.nav__mobile-link');
 
 function openMenu() {
   hamburger.classList.add('open');
@@ -41,28 +36,23 @@ function closeMenu() {
 }
 
 hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.contains('open');
-  isOpen ? closeMenu() : openMenu();
+  mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-// Close on mobile link click
-mobileLinks.forEach(link => {
-  link.addEventListener('click', closeMenu);
-});
+mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-// Close on Escape key
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    if (mobileMenu.classList.contains('open')) closeMenu();
-    if (lightbox.classList.contains('open')) closeLightbox();
+    if (mobileMenu.classList.contains('open'))  closeMenu();
+    if (lightbox.classList.contains('open'))    closeLightbox();
   }
 });
 
 // ── Active nav via IntersectionObserver ──
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav__link[data-section]');
+const navLinks  = document.querySelectorAll('.nav__link[data-section]');
 
-const observer = new IntersectionObserver(
+const sectionObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -78,25 +68,83 @@ const observer = new IntersectionObserver(
     threshold: 0,
   }
 );
+sections.forEach(s => sectionObserver.observe(s));
 
-sections.forEach(section => observer.observe(section));
+// ── Scroll Reveal ──
+const revealEls = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// ── Custom Cursor (pointer:fine devices only) ──
+if (window.matchMedia('(pointer: fine)').matches) {
+  const cursor    = document.getElementById('cursor');
+  const cursorDot = document.getElementById('cursorDot');
+
+  let mouseX = -100, mouseY = -100;
+  let ringX  = -100, ringY  = -100;
+  let visible = false;
+  let raf;
+
+  // Dot tracks mouse exactly; ring lerps behind for smooth feel
+  function animateCursor() {
+    ringX += (mouseX - ringX) * 0.14;
+    ringY += (mouseY - ringY) * 0.14;
+    cursor.style.left    = ringX + 'px';
+    cursor.style.top     = ringY + 'px';
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top  = mouseY + 'px';
+    raf = requestAnimationFrame(animateCursor);
+  }
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!visible) {
+      visible = true;
+      cursor.classList.add('cursor--visible');
+      cursorDot.classList.add('cursor--visible');
+      raf = requestAnimationFrame(animateCursor);
+    }
+  });
+
+  document.addEventListener('mouseleave', () => {
+    visible = false;
+    cursor.classList.remove('cursor--visible');
+    cursorDot.classList.remove('cursor--visible');
+    cancelAnimationFrame(raf);
+  });
+
+  // Grow ring on interactive elements
+  document.querySelectorAll('a, button, [role="button"]').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
+  });
+}
 
 // ── Gallery Lightbox ──
-const galleryItems = document.querySelectorAll('.gallery__item');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
+const galleryItems    = document.querySelectorAll('.gallery__item');
+const lightbox        = document.getElementById('lightbox');
+const lightboxImg     = document.getElementById('lightboxImg');
 const lightboxCaption = document.getElementById('lightboxCaption');
-const lightboxClose = document.getElementById('lightboxClose');
-const lightboxPrev = document.getElementById('lightboxPrev');
-const lightboxNext = document.getElementById('lightboxNext');
+const lightboxClose   = document.getElementById('lightboxClose');
+const lightboxPrev    = document.getElementById('lightboxPrev');
+const lightboxNext    = document.getElementById('lightboxNext');
 
-// Build images array from gallery
 const galleryImages = Array.from(galleryItems).map(item => {
   const img = item.querySelector('img');
-  return {
-    src: img.src,
-    alt: img.alt,
-  };
+  return { src: img.src, alt: img.alt };
 });
 
 let currentIndex = 0;
@@ -135,41 +183,27 @@ function nextImage() {
 galleryItems.forEach((item, i) => {
   item.addEventListener('click', () => openLightbox(i));
   item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      openLightbox(i);
-    }
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
   });
 });
 
 lightboxClose.addEventListener('click', closeLightbox);
 lightboxPrev.addEventListener('click', prevImage);
 lightboxNext.addEventListener('click', nextImage);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 
-// Close on backdrop click (clicking outside the image)
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-// Arrow keys in lightbox
 document.addEventListener('keydown', e => {
   if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'ArrowLeft') prevImage();
+  if (e.key === 'ArrowLeft')  prevImage();
   if (e.key === 'ArrowRight') nextImage();
 });
 
-// Touch swipe support for lightbox
+// Touch swipe for lightbox
 let touchStartX = 0;
-let touchEndX = 0;
-
 lightbox.addEventListener('touchstart', e => {
   touchStartX = e.changedTouches[0].screenX;
 }, { passive: true });
-
 lightbox.addEventListener('touchend', e => {
-  touchEndX = e.changedTouches[0].screenX;
-  const delta = touchStartX - touchEndX;
-  if (Math.abs(delta) > 50) {
-    delta > 0 ? nextImage() : prevImage();
-  }
+  const delta = touchStartX - e.changedTouches[0].screenX;
+  if (Math.abs(delta) > 50) delta > 0 ? nextImage() : prevImage();
 }, { passive: true });
